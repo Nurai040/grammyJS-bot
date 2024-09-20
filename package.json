@@ -1,9 +1,12 @@
 {
   "name": "grammyjs-bot",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "mkdir -p dist && tsc",
+    "start": "ts-node dist/index.js",
+    "dev": "ts-node index.js",
+    "prod": "npm run build && npm run start"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +16,9 @@
     "dotenv": "^16.4.5",
     "grammy": "^1.30.0",
     "nodemon": "^3.1.6"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
   }
 }
